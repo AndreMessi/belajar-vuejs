@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tes vuejs</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- membuat kondisi dan list-->
+        <button v-on:click="show = ! show">Show / Hide</button>
+        <p v-if="show">i'm part-time visible</p>
+        <p v-else>i'm visible</p>
+        <p v-show="show">horeeee('_')</p>
+        <hr>
+        <ul>
+            <li v-for="(person, index) in person">
+                {{ person }} - {{ index }}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                show: true,
+                person: [
+                    { name: 'andre', age: 23 },
+                    { name: 'raji', age: 25 },
+                    { name: 'yoga', age: 22 }
+                ]
+            }
+        });
+
+    </script>
+</body>
+
+</html>

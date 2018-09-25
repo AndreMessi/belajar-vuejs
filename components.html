@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tes vuejs</title>
+    <script src="https://unpkg.com/vue"></script>
+    <style>
+        .user{
+            border: 1px solid #ccc;
+            background-color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- membuat component-->
+        <div class="user" v-for="user in users">
+            <p>username:{{user.username}}</p>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            // buat elmen 
+            el:'#app',
+            data:{
+                users:[
+                    {username:'andre putra'},
+                    {username:'yoga hermawan'},
+                    {username:'raji al qadri'}
+                ]
+            }
+        });
+
+    </script>
+</body>
+</html>
